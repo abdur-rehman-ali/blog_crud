@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+{% block title %}
+Post page
+{% endblock %}
+
+{% block body %}
+
+
+{% for post in posts %}
+<br>
+<br>
+<h2><b>TITLE:</b>{{post.title}}</h2>
+<p><b>CONTENT:</b>{{post.content}}</p>
+<h5><b>AUTHOR:</b>{{post.author}}</h5>
+<a href="/post/delete/{{post.id}}" class="btn btn-danger">Delete</a>
+<a href="/post/edit/{{post.id}}" class="btn btn-success">Edit</a>
+<hr>
+<hr>
+{%endfor%}
+{% endblock %}

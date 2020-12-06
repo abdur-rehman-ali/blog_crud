@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+{% block title %}
+index page
+{% endblock %}
+
+{% block body %}
+<h1>Here we take input for blog post</h1>
+<form  action="{{ url_for('post') }}" method="POST">
+    <div class="form-group">
+    <input type="text" name="title" class="form-control" placeholder="Enter title of blog">
+</div>
+<div class="form-group">
+    <input class="form-control" type="text" name="content" placeholder="Enter content ">
+</div>
+<div class="form-group">
+    <input class="form-control" type="text" name="author" placeholder="Enter author name">
+</div>
+<div class="form-group">
+    <button class="form-control btn btn-success" type="submit">Add</button>
+</div>
+</form>
+
+{% endblock %}
